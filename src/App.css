@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap');
+
+body {
+    background-color: rgb(196, 215, 242);
+    background-image: url('./assets/weatherBg.jpg');
+    color: rgb(54, 54, 71);
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.starBtn {
+    width: 30px;
+    margin-top: -5px;
+}
+
+.currentCard {
+    background-color: rgb(171, 181, 197);
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+}
+
+.currentLocal {
+    color: black;
+    font-weight: bold;
+}
+
+.currentTemp {
+    margin-top: 15px;
+}
+
+.currentIcon {
+    margin-top: -25px;
+    width: 75%;
+}
+
+.highTemp {
+    color: rgb(185, 0, 0);
+}
+
+.lowTemp {
+    color: rgb(0, 0, 199);
+}
+
+.fiveCard {
+    background-color: rgb(190, 199, 209);
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+}
