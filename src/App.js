@@ -37,7 +37,6 @@ function App() {
     setWeatherIcon(currentResponse.weatherIconSrc);
   }
 
-  const [items, setItems] = useState([]);
   const [dayOne, setDayOne] = useState([]);
   const [dayTwo, setDayTwo] = useState([]);
   const [dayThree, setDayThree] = useState([]);
@@ -47,8 +46,6 @@ function App() {
   const fiveDay = async (longi, lati) => {
     const fiveResponse = await FiveDays(longi, lati);
     console.log(fiveResponse);
-    // setItems(fiveResponse.daysInfo);
-    // console.log(items);
     setDayOne(fiveResponse.daysInfo[0]);
     setDayTwo(fiveResponse.daysInfo[1]);
     setDayThree(fiveResponse.daysInfo[2]);
@@ -65,26 +62,28 @@ function App() {
           </Col>
         </Row>
         <Row className='my-5'>
-          <Col className='col-5'>
+          <Col className='col-4'>
             <div className='currentCard'>
               <Row>
                 <Col className='col-12 text-center'>
                   <h1 className='currentLocal'>{location} <span><StarBtn /></span></h1>
                 </Col>
-                <hr/>
-                <Col className='text-center'>
-                  <img className='currentIcon' src={weatherIcon} />
-                </Col>
-                <Col>
-                  <h1 className='currentTemp'>{currentTemp} °F</h1>
-                </Col>
-                <Col className='col-3 py-2'>
-                  <h5 className='highTemp'><span><HighIcon/></span>{high}°</h5>
-                  <h5 className='lowTemp'><span><LowIcon/></span>{low}°</h5>
-                </Col>
+                <hr />
               </Row>
               <Row>
-                <Col className='col-12 my-2 text-center'>
+                <Col className='text-end'>
+                  <h1 className='currentTemp'>{currentTemp} °F</h1>
+                </Col>
+                <Col className='py-2'>
+                  <h5 className='highTemp'><span><HighIcon /></span>{high}°</h5>
+                  <h5 className='lowTemp'><span><LowIcon /></span>{low}°</h5>
+                </Col>
+              </Row>
+              <Row className='my-2'>
+                <Col className='text-end'>
+                  <img className='currentIcon' src={weatherIcon} />
+                </Col>
+                <Col className='currentWeather'>
                   <h4>{currentWeather}</h4>
                 </Col>
               </Row>
@@ -92,7 +91,7 @@ function App() {
           </Col>
         </Row>
 
-        <hr/>
+        <hr />
 
         <Row className='my-5'>
           <Col>
